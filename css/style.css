@@ -156,7 +156,7 @@ header {
   max-width: calc(var(--size) * 144);
   margin: 0 auto;
   padding: calc(var(--size) * 2.5) calc(var(--size) * 1) calc(var(--size) * 8.5);
-  background: rgba(0, 0, 0, 0.6) url("/img/header-bg.png") no-repeat center;
+  background: rgba(0, 0, 0, 0.6) url("../img/header-bg.png") no-repeat center;
   background-size: cover;
   background-blend-mode: multiply;
   position: relative;
@@ -592,7 +592,7 @@ h1:after {
 /* our team */
 .ourTeam {
   padding: calc(var(--size) * 4.5) 0 calc(var(--size) * 10);
-  background: rgba(0, 0, 0, 0.6) url("/img/our-team-bg.png") no-repeat center;
+  background: rgba(0, 0, 0, 0.6) url("../img/our-team-bg.png") no-repeat center;
   background-size: cover;
   background-blend-mode: multiply;
   position: relative;
@@ -730,7 +730,7 @@ h1:after {
 /* specialties */
 .specialties {
   padding: calc(var(--size) * 4.5);
-  background: rgba(0, 0, 0, 0.6) url("/img/spec-bg.png") no-repeat center;
+  background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.png") no-repeat center;
   background-size: cover;
   background-blend-mode: multiply;
   position: relative;
@@ -946,7 +946,7 @@ h1:after {
 /* event */
 .event {
   padding: calc(var(--size) * 4.5);
-  background: rgba(0, 0, 0, 0.6) url("/img/spec-bg.png") no-repeat center;
+  background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.png") no-repeat center;
   background-size: cover;
   background-blend-mode: multiply;
   position: relative;
