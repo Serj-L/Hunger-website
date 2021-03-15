@@ -1,0 +1,292 @@
+:root {
+    --size: 10px;
+
+    --fontsize-xs: 12px;
+    --fontsize-sm: 14px;
+    --fontsize-md: 18px;
+    --fontsize-lg: 24px;
+    --fontsize-xl: 36px;
+    --fontsize-xxl: 96px;
+
+    --lineheight-xs: 16px;
+    --lineheight-sm: 22px;
+    --lineheight-md: 36px;
+    --lineheight-xl: 48px;
+
+    --transition: 0.2s;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "Banny";
+    src: url("../fonts/Banny-Round.eot");
+    src: local("☺"), url("../fonts/Banny-Round.woff") format("woff"), url("../fonts/Banny-Round.ttf") format("truetype"),
+        url("../fonts/Banny-Round.svg") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Banny";
+    src: url("../fonts/Banny-BoldRound.eot");
+    src: local("☺"), url("../fonts/Banny-BoldRound.woff") format("woff"),
+        url("../fonts/Banny-BoldRound.ttf") format("truetype"), url("../fonts/Banny-BoldRound.svg") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Banny";
+    src: url("../fonts/Banny-LightRound.eot");
+    src: local("☺"), url("../fonts/Banny-LightRound.woff") format("woff"),
+        url("../fonts/Banny-LightRound.ttf") format("truetype"), url("../fonts/Banny-LightRound.svg") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+h1 {
+    font-family: "Banny", sans-serif;
+    font-size: var(--fontsize-xxl);
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--fontsize-xs);
+    line-height: var(--lineheight-xs);
+    font-weight: 700;
+    letter-spacing: calc(var(--fontsize-sm) * 0.6);
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Banny", sans-serif;
+    font-size: var(--fontsize-lg);
+    line-height: var(--lineheight-xl);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--fontsize-md);
+    line-height: var(--lineheight-sm);
+    font-weight: 700;
+}
+
+h5 {
+    font-family: "Banny", sans-serif;
+    font-size: var(--fontsize-md);
+    line-height: var(--lineheight-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.description {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--fontsize-sm);
+    line-height: var(--lineheight-sm);
+    font-weight: 400;
+}
+
+.primary-btn {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--fontsize-xs);
+    line-height: var(--lineheight-sm);
+    font-weight: 700;
+    color: #ffffff;
+    height: calc(var(--size) * 6);
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+input,
+textarea {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--fontsize-sm);
+    line-height: var(--lineheight-sm);
+    font-weight: 400;
+    height: calc(var(--size) * 6);
+    background-color: #e5e5e5;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 0 calc(var(--size) * 1.5) 0;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--fontsize-sm);
+    line-height: var(--lineheight-sm);
+    font-weight: 400;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    border-color: #e8c300;
+}
+
+/* common for about us - our team - book table - specialties - events */
+.container {
+    max-width: calc(var(--size) * 144);
+    margin: 0 auto;
+}
+
+.section-bg-lines {
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.2);
+        height: 100%;
+        width: 1px;
+        top: 0;
+    }
+
+    &::before {
+        left: 20%;
+    }
+
+    &::after {
+        right: 20%;
+    }
+}
+
+.section-central-bg-line {
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.2);
+        height: 100%;
+        width: 1px;
+        top: 0;
+        left: 50%;
+    }
+}
+
+.section-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(var(--size) * 128);
+    margin: 0 auto;
+}
+
+.content-inner-wrapper {
+    max-width: calc(var(--size) * 60);
+    text-align: center;
+    flex-grow: 1;
+}
+
+.section-title {
+    &::after {
+        display: block;
+        margin: calc(var(--size) / 2) auto 0;
+        width: calc(var(--size) * 6);
+        height: calc(var(--size) / 2);
+        background: #e8c300;
+        content: "";
+        border-radius: calc(var(--size) / 2);
+    }
+}
+
+.img-inner-wrapper {
+    max-width: calc(var(--size) * 60);
+    flex-grow: 1;
+}
+
+.section-img-wrapper {
+    max-width: calc(var(--size) * 47.5);
+    position: relative;
+    z-index: 1;
+}
+
+.section-img {
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+
+.section-img-right {
+    margin-right: auto;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -25%;
+        height: 48%;
+        border-radius: calc(var(--size) / 2);
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        width: 4%;
+        box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.65);
+    }
+
+    &::after {
+        width: 48%;
+        border: calc(var(--size) * 2) solid #e8c300;
+    }
+}
+
+.section-img-left {
+    margin-left: auto;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -25%;
+        height: 48%;
+        border-radius: calc(var(--size) / 2);
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        width: 4%;
+        box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.65);
+    }
+
+    &::after {
+        width: 48%;
+        border: calc(var(--size) * 2) solid #e8c300;
+    }
+}
+/* /common for about us - our team - book table - specialties - events */
+
+@import "_header.scss";
+@import "_about-us.scss";
+@import "_our-team.scss";
+@import "_book-table.scss";
+@import "_specialties.scss";
+@import "_menu.scss";
+@import "_events.scss";
+@import "_contact-us.scss";
+@import "_footer.scss";

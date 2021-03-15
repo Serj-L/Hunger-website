@@ -1,0 +1,13 @@
+.footer {
+    background-color: #000000;
+    padding: calc(var(--size) * 4) 0;
+    text-align: center;
+
+    span {
+        font-family: "Open Sans", sans-serif;
+        font-size: var(--fontsize-xs);
+        line-height: var(--lineheight-xs);
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}

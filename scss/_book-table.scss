@@ -1,0 +1,104 @@
+.book-table {
+    padding: calc(var(--size) * 10) calc(var(--size) * 1.5) calc(var(--size) * 4.5);
+    background-color: #ffffff;
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        margin-top: calc(var(--size) * 2);
+    }
+
+    .book-table-form-left-inputs-wrapper,
+    .book-table-form-right-inputs-wrapper {
+        flex-basis: 49%;
+        display: flex;
+        flex-direction: column;
+
+        input:not(:first-child) {
+            margin-top: var(--size);
+        }
+    }
+
+    .number-input-wrapper {
+        position: relative;
+        margin-top: var(--size);
+        border-radius: 5px;
+
+        input {
+            width: 100%;
+        }
+
+        &.active {
+            outline: 2px solid #e8c300;
+            outline-offset: -2px;
+        }
+    }
+
+    .input-up-button,
+    .input-down-button {
+        position: absolute;
+        font-size: var(--fontsize-md);
+        color: rgba(51, 51, 51, 0.5);
+        padding: calc(var(--size) / 2);
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover,
+        &:focus {
+            color: #e8c300;
+        }
+    }
+
+    .input-up-button {
+        top: calc(var(--size) / 2);
+        right: calc(var(--size) / 2);
+    }
+
+    .input-down-button {
+        bottom: calc(var(--size) / 2);
+        right: calc(var(--size) / 2);
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: var(--size);
+        background-color: #9b9b9b;
+        border: 1px solid #9b9b9b;
+        transition: var(--transition);
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            left: -1px;
+            right: 0;
+            top: -1px;
+            bottom: 0;
+            background-color: #e8c300;
+            border-radius: 5px;
+            z-index: -1;
+            transform: scaleY(0);
+            transition: var(--transition) ease-in;
+        }
+        &:hover,
+        &:focus {
+            &::after {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__working-hours {
+        display: block;
+        margin-top: calc(var(--size) * 4.5);
+        font-family: "Open Sans", sans-serif;
+        font-size: var(--fontsize-xs);
+        line-height: var(--lineheight-xs);
+        font-weight: 400;
+        color: rgba(51, 51, 51, 0.5);
+        text-align: center;
+    }
+}

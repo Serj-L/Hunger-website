@@ -1,0 +1,28 @@
+.our-team {
+    padding: calc(var(--size) * 4.5) 0 calc(var(--size) * 10);
+    background: rgba(0, 0, 0, 0.6) url("../img/our-team-bg.jpg") no-repeat center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+
+    h2 {
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .our-team-wrapper {
+        margin: calc(var(--size) * 4.5) auto 0;
+    }
+
+    &__content {
+        color: #ffffff;
+    }
+
+    &__subtitle {
+        margin-top: calc(var(--size) * 2);
+    }
+
+    &__text {
+        margin-top: calc(var(--size) * 3);
+    }
+}

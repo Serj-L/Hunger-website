@@ -1,0 +1,15 @@
+.about-us {
+    background-color: #ffffff;
+
+    .about-us-wrapper {
+        padding: calc(var(--size) * 10) calc(var(--size) * 1.5);
+    }
+
+    &__subtitle {
+        margin-top: calc(var(--size) * 2);
+    }
+
+    &__text {
+        margin-top: calc(var(--size) * 3);
+    }
+}

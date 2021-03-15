@@ -13,7 +13,7 @@ $(document).on('click', '.input-up-button', function () {
 });
 
 // Запрещаем ввод текста
-$(document).on('input', '.form-input--numberInput', function () {
+$(document).on('input', '.form-input--number-input', function () {
     if (this.value.match(/[^0-9]/g)) {
         this.value = this.value.replace(/[^0-9]/g, '');
     }
@@ -21,73 +21,55 @@ $(document).on('input', '.form-input--numberInput', function () {
 
 // Hover на input
 $(document).ready(function() {
-	$('.input-up-button, .input-down-button').hover(function(event) {
-		$(".number-input-wrapper").toggleClass("active")
-	});
+    $('.input-up-button, .input-down-button').hover(function(event) {
+        $(".number-input-wrapper").toggleClass("active")
+    });
 });
 /* /кнопки input (People) */
 
 /* menu */
 $(document).ready(function() {
-	$('.pizza').click(function(event) {
+    $('.pizza').click(function(event) {
         $('.pizza').addClass("active")
-		$(".menu__list--pizza").addClass("active")
-        $(".menuNav-item").not($(this)).removeClass("active")
+        $(".menu__list--pizza").addClass("active")
+        $(".menu-nav-item").not($(this)).removeClass("active")
         $(".menu__list").not(".menu__list--pizza").removeClass("active")
-	});
-});
-
-$(document).ready(function() {
-	$('.soup').click(function(event) {
+    });
+    $('.soup').click(function(event) {
         $('.soup').addClass("active")
-		$(".menu__list--soup").addClass("active")
-        $(".menuNav-item").not($(this)).removeClass("active")
+        $(".menu__list--soup").addClass("active")
+        $(".menu-nav-item").not($(this)).removeClass("active")
         $(".menu__list").not(".menu__list--soup").removeClass("active")
-	});
-});
-
-$(document).ready(function() {
-	$('.pasta').click(function(event) {
+    });
+    $('.pasta').click(function(event) {
         $('.pasta').addClass("active")
-		$(".menu__list--pasta").addClass("active")
-        $(".menuNav-item").not($(this)).removeClass("active")
+        $(".menu__list--pasta").addClass("active")
+        $(".menu-nav-item").not($(this)).removeClass("active")
         $(".menu__list").not(".menu__list--pasta").removeClass("active")
-	});
-});
-
-$(document).ready(function() {
-	$('.desert').click(function(event) {
+    });
+    $('.desert').click(function(event) {
         $('.desert').addClass("active")
-		$(".menu__list--desert").addClass("active")
-        $(".menuNav-item").not($(this)).removeClass("active")
+        $(".menu__list--desert").addClass("active")
+        $(".menu-nav-item").not($(this)).removeClass("active")
         $(".menu__list").not(".menu__list--desert").removeClass("active")
-	});
-});
-
-$(document).ready(function() {
-	$('.wine').click(function(event) {
+    });
+    $('.wine').click(function(event) {
         $('.wine').addClass("active")
-		$(".menu__list--wine").addClass("active")
-        $(".menuNav-item").not($(this)).removeClass("active")
+        $(".menu__list--wine").addClass("active")
+        $(".menu-nav-item").not($(this)).removeClass("active")
         $(".menu__list").not(".menu__list--wine").removeClass("active")
-	});
-});
-
-$(document).ready(function() {
-	$('.beer').click(function(event) {
+    });
+    $('.beer').click(function(event) {
         $('.beer').addClass("active")
-		$(".menu__list--beer").addClass("active")
-        $(".menuNav-item").not($(this)).removeClass("active")
+        $(".menu__list--beer").addClass("active")
+        $(".menu-nav-item").not($(this)).removeClass("active")
         $(".menu__list").not(".menu__list--beer").removeClass("active")
-	});
-});
-
-$(document).ready(function() {
-	$('.drinks').click(function(event) {
+    });
+    $('.drinks').click(function(event) {
         $('.drinks').addClass("active")
-		$(".menu__list--drinks").addClass("active")
-        $(".menuNav-item").not($(this)).removeClass("active")
+        $(".menu__list--drinks").addClass("active")
+        $(".menu-nav-item").not($(this)).removeClass("active")
         $(".menu__list").not(".menu__list--drinks").removeClass("active")
-	});
+    });
 });
 /* /menu */
