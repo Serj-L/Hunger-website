@@ -1209,7 +1209,7 @@ textarea:focus {
   overflow: auto;
 }
 
-@media (max-width: 793px) {
+@media (max-width: 810px) {
   .menu__items {
     height: 60vh;
   }
