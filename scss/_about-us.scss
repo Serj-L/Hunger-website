@@ -12,4 +12,10 @@
     &__text {
         margin-top: calc(var(--size) * 3);
     }
+
+    &__img {
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
 }

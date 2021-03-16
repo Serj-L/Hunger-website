@@ -1,5 +1,5 @@
 .specialties {
-    padding: calc(var(--size) * 4.5);
+    padding: calc(var(--size) * 4.5) calc(var(--size) * 1.5);
     background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.jpg") no-repeat center;
     background-size: cover;
     background-blend-mode: multiply;
@@ -24,6 +24,12 @@
 
     &__text {
         margin-top: calc(var(--size) * 3);
+    }
+
+    &__img {
+        @media (max-width: 991px) {
+            display: none;
+        }
     }
 
     &__dots {

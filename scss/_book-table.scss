@@ -2,10 +2,20 @@
     padding: calc(var(--size) * 10) calc(var(--size) * 1.5) calc(var(--size) * 4.5);
     background-color: #ffffff;
 
+    &__content {
+        @media (max-width: 1319px) {
+            flex-basis: 85%;
+        }
+    }
+
     &__form {
         display: flex;
         justify-content: space-between;
         margin-top: calc(var(--size) * 2);
+
+        @media (max-width: 649px) {
+            flex-direction: column;
+        }
     }
 
     .book-table-form-left-inputs-wrapper,
@@ -15,6 +25,12 @@
         flex-direction: column;
 
         input:not(:first-child) {
+            margin-top: var(--size);
+        }
+    }
+
+    .book-table-form-right-inputs-wrapper {
+        @media (max-width: 649px) {
             margin-top: var(--size);
         }
     }
@@ -88,6 +104,12 @@
             &::after {
                 transform: scale(1);
             }
+        }
+    }
+
+    &__img {
+        @media (max-width: 991px) {
+            display: none;
         }
     }
 

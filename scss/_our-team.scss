@@ -1,5 +1,5 @@
 .our-team {
-    padding: calc(var(--size) * 4.5) 0 calc(var(--size) * 10);
+    padding: calc(var(--size) * 4.5) calc(var(--size) * 1.5) calc(var(--size) * 10);
     background: rgba(0, 0, 0, 0.6) url("../img/our-team-bg.jpg") no-repeat center;
     background-size: cover;
     background-blend-mode: multiply;
@@ -24,5 +24,11 @@
 
     &__text {
         margin-top: calc(var(--size) * 3);
+    }
+
+    &__img {
+        @media (max-width: 991px) {
+            display: none;
+        }
     }
 }

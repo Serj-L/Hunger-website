@@ -193,6 +193,10 @@ textarea:focus {
     align-items: center;
     max-width: calc(var(--size) * 128);
     margin: 0 auto;
+
+    @media (max-width: 991px) {
+        justify-content: center;
+    }
 }
 
 .content-inner-wrapper {
@@ -216,6 +220,10 @@ textarea:focus {
 .img-inner-wrapper {
     max-width: calc(var(--size) * 60);
     flex-grow: 1;
+
+    @media (max-width: 1319px) {
+        flex-grow: 0;
+    }
 }
 
 .section-img-wrapper {
@@ -228,10 +236,25 @@ textarea:focus {
     display: block;
     border-radius: 5px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 1319px) {
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
 }
 
 .section-img-right {
     margin-right: auto;
+
+    @media (max-width: 1319px) {
+        margin-left: calc(var(--size) * 2);
+        margin-right: 0;
+    }
+
+    @media (max-width: 799px) {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
 
     &::before,
     &::after {
@@ -242,6 +265,10 @@ textarea:focus {
         height: 48%;
         border-radius: calc(var(--size) / 2);
         transform: translateY(-50%);
+
+        @media (max-width: 1319px) {
+            display: none;
+        }
     }
 
     &::before {
@@ -258,6 +285,15 @@ textarea:focus {
 .section-img-left {
     margin-left: auto;
 
+    @media (max-width: 1319px) {
+        margin-right: calc(var(--size) * 2);
+        margin-left: 0;
+    }
+
+    @media (max-width: 799px) {
+        margin-right: 0;
+    }
+
     &::before,
     &::after {
         content: "";
@@ -267,6 +303,10 @@ textarea:focus {
         height: 48%;
         border-radius: calc(var(--size) / 2);
         transform: translateY(-50%);
+
+        @media (max-width: 1319px) {
+            display: none;
+        }
     }
 
     &::before {
@@ -280,6 +320,50 @@ textarea:focus {
     }
 }
 /* /common for about us - our team - book table - specialties - events */
+.scroll-up-btn {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(232, 193, 0, 0.8);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color 0.2s, opacity 0.5s, visibility 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        cursor: pointer;
+
+        &::after {
+            content: "\f077";
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: rgba(232, 193, 0, 1);
+            }
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
 
 @import "_header.scss";
 @import "_about-us.scss";

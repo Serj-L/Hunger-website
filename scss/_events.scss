@@ -1,5 +1,5 @@
 .event {
-    padding: calc(var(--size) * 4.5);
+    padding: calc(var(--size) * 4.5) calc(var(--size) * 1.5);
     background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.jpg") no-repeat center;
     background-size: cover;
     background-blend-mode: multiply;
@@ -7,6 +7,10 @@
 
     .event-wrapper {
         margin-top: calc(var(--size) * 4);
+
+        @media (max-width: 799px) {
+            flex-direction: column-reverse;
+        }
     }
 
     h2 {
@@ -51,5 +55,10 @@
 
     &__fotos {
         display: flex;
+        overflow: auto;
+
+        img {
+            min-width: calc(var(--size) * 25);
+        }
     }
 }
