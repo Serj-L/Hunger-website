@@ -1,6 +1,6 @@
 .menu {
     background-color: #ffffff;
-    padding: calc(var(--size) * 10) calc(var(--size) * 1.5);
+    padding: $size * 10 $size * 1.5;
 
     .menu-wrapper {
         display: flex;
@@ -14,40 +14,56 @@
     }
 
     &__subtitle {
-        max-width: calc(var(--size) * 57);
-        margin-top: calc(var(--size) * 3);
+        max-width: $size * 57;
+        margin-top: $size * 3;
     }
     .menu__nav {
         display: flex;
         width: 100%;
 
+        @media (max-width: 499px) {
+            width: 90%;
+            justify-content: center;
+        }
+
         ul {
             display: flex;
             justify-content: center;
             flex-grow: 1;
-            margin-top: calc(var(--size) * 5);
+            margin-top: $size * 5;
+
+            @media (max-width: 499px) {
+                flex-wrap: wrap;
+            }
 
             li {
                 flex-grow: 1;
-                max-width: calc(var(--size) * 12);
-                padding: calc(var(--size) * 1.5) 0;
+                max-width: $size * 12;
+                padding: $size * 1.5 0;
                 text-align: center;
 
                 &:not(:first-child) {
-                    border-left: 2px solid rgba(51, 51, 51, 0.2);
+                    @media (min-width: 500px) {
+                        border-left: 2px solid rgba(51, 51, 51, 0.2);
+                    }
                 }
 
                 .menu-nav-item {
                     font-family: "Open Sans", sans-serif;
-                    font-size: var(--fontsize-xs);
-                    line-height: var(--lineheight-xs);
+                    font-size: $fontsize-xs;
+                    line-height: $lineheight-xs;
                     font-weight: 700;
                     color: #333333;
                     text-transform: uppercase;
-                    padding: var(--size);
+                    padding: $size;
                     position: relative;
-                    transition: var(--transition) ease-in;
+                    transition: $transition ease-in;
                     cursor: pointer;
+
+                    @media (max-width: 499px) {
+                        flex-wrap: wrap;
+                        font-size: $fontsize-sm;
+                    }
 
                     &::after {
                         content: "";
@@ -59,16 +75,18 @@
                         background-color: #e8c300;
                         transform: scaleX(0);
                         transform-origin: left;
-                        transition: var(--transition) ease-in;
+                        transition: $transition ease-in;
                     }
 
-                    &:hover,
-                    &:focus {
-                        color: #e8c300;
+                    @media (min-width: 993px) {
+                        &:hover,
+                        &:focus {
+                            color: #e8c300;
 
-                        &::after {
-                            transform: scaleX(1);
-                            transform-origin: right;
+                            &::after {
+                                transform: scaleX(1);
+                                transform-origin: right;
+                            }
                         }
                     }
 
@@ -91,11 +109,13 @@
     }
 
     &__list {
-        max-width: calc(var(--size) * 125);
-        margin: calc(var(--size) * 5) calc(var(--size) * -1.5) 0;
+        max-width: $size * 125;
+        margin: $size * 5 $size * -1.5 0;
+        overflow: auto;
+        width: 100%;
 
         @media (max-width: 854px) {
-            margin: calc(var(--size) * 5) 0 0;
+            margin: $size * 5 0 0;
         }
     }
 
@@ -103,52 +123,79 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        overflow: auto;
 
         @media (max-width: 810px) {
-            height: 60vh;
+            width: $size * 117;
+            justify-content: flex-start;
+        }
+        @media (max-width: 349px) {
+            width: 320vw;
         }
     }
 
     &__item {
         display: flex;
-        margin: calc(var(--size) * 3.5) calc(var(--size) * 1.5) 0;
+        margin: $size * 3.5 $size * 1.5 0;
 
-        @media (max-width: 576px) {
-            margin: calc(var(--size) * 3.5) 0 0;
+        @media (max-width: 449px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width: 349px) {
+            width: 70vw;
         }
     }
 
     &__item-title {
         position: relative;
 
-        &::after {
-            content: "....";
-            position: absolute;
-            right: -2.5%;
-            bottom: 0;
-            font-family: "Banny", sans-serif;
-            font-size: var(--fontsize-md);
-            line-height: var(--lineheight-sm);
-            font-weight: 700;
-            letter-spacing: 4px;
+        @media (min-width: 450px) {
+            &::after {
+                content: "....";
+                position: absolute;
+                right: -2.5%;
+                bottom: 0;
+                font-family: "Banny", sans-serif;
+                font-size: $fontsize-md;
+                line-height: $lineheight-sm;
+                font-weight: 700;
+                letter-spacing: 4px;
+            }
         }
-    }
-
-    &__item-price {
-        font-family: "Banny", sans-serif;
-        font-size: var(--fontsize-md);
-        line-height: var(--lineheight-sm);
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-left: var(--size);
     }
 
     &__item-description {
         font-family: "Open Sans", sans-serif;
-        font-size: var(--fontsize-xs);
-        line-height: var(--lineheight-xs);
+        font-size: $fontsize-xs;
+        line-height: $lineheight-xs;
         color: rgba(51, 51, 51, 0.5);
+    }
+
+    &__item-price {
+        font-family: "Banny", sans-serif;
+        font-size: $fontsize-md;
+        line-height: $lineheight-sm;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-left: $size;
+        position: relative;
+
+        @media (max-width: 449px) {
+            margin: $size 0 0;
+
+            &::before {
+                content: "....";
+                position: absolute;
+                right: 50%;
+                transform: translateX(50%);
+                bottom: 95%;
+                font-family: "Banny", sans-serif;
+                font-size: $fontsize-md;
+                line-height: $lineheight-sm;
+                font-weight: 700;
+                letter-spacing: 4px;
+            }
+        }
     }
 
     &__list {
@@ -162,7 +209,7 @@
             display: none;
 
             &.active {
-                display: flex;
+                display: block;
             }
         }
     }

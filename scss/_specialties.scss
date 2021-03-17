@@ -1,5 +1,5 @@
 .specialties {
-    padding: calc(var(--size) * 4.5) calc(var(--size) * 1.5);
+    padding: $size * 4.5 $size * 1.5;
     background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.jpg") no-repeat center;
     background-size: cover;
     background-blend-mode: multiply;
@@ -11,7 +11,7 @@
     }
 
     .specialties-wrapper {
-        margin: calc(var(--size) * 4.5) auto 0;
+        margin: $size * 4.5 auto 0;
     }
 
     &__content {
@@ -19,11 +19,11 @@
     }
 
     &__subtitle {
-        margin-top: calc(var(--size) * 2);
+        margin-top: $size * 2;
     }
 
     &__text {
-        margin-top: calc(var(--size) * 3);
+        margin-top: $size * 3;
     }
 
     &__img {
@@ -35,7 +35,7 @@
     &__dots {
         display: flex;
         justify-content: center;
-        margin-top: calc(var(--size) * 4.5);
+        margin-top: $size * 4.5;
 
         .dot-indicator {
             display: block;
@@ -46,7 +46,7 @@
             border-radius: 50%;
 
             &:not(:first-child) {
-                margin-left: calc(var(--size) * 2);
+                margin-left: $size * 2;
             }
 
             &.active-dot {

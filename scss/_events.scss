@@ -1,12 +1,12 @@
 .event {
-    padding: calc(var(--size) * 4.5) calc(var(--size) * 1.5);
+    padding: $size * 4.5 $size * 1.5;
     background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.jpg") no-repeat center;
     background-size: cover;
     background-blend-mode: multiply;
     position: relative;
 
     .event-wrapper {
-        margin-top: calc(var(--size) * 4);
+        margin-top: $size * 4;
 
         @media (max-width: 799px) {
             flex-direction: column-reverse;
@@ -29,14 +29,14 @@
         width: 15%;
         height: 100%;
         top: 0;
-        padding-top: calc(var(--size) * 1.5);
+        padding-top: $size * 1.5;
         text-align: center;
-        border-radius: 0 calc(var(--size) / 2) calc(var(--size) / 2) 0;
+        border-radius: 0 4px 4px 0;
 
         span {
             font-family: "Banny", sans-serif;
-            font-size: var(--fontsize-lg);
-            line-height: var(--lineheight-xs);
+            font-size: $fontsize-lg;
+            line-height: $lineheight-xs;
             font-weight: 400;
             color: #ffffff;
             text-transform: uppercase;
@@ -58,7 +58,7 @@
         overflow: auto;
 
         img {
-            min-width: calc(var(--size) * 25);
+            min-width: $size * 25;
         }
     }
 }

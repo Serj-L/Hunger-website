@@ -1,27 +1,27 @@
 .contact-us {
     background-color: #ffffff;
-    padding-top: calc(var(--size) * 10);
+    padding-top: $size * 10;
 
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: calc(var(--size) * 128);
+        max-width: $size * 128;
         margin: 0 auto;
         text-align: center;
-        padding: 0 calc(var(--size) * 1.5);
+        padding: 0 $size * 1.5;
     }
 
     &__subtitle {
-        max-width: calc(var(--size) * 57);
-        margin-top: calc(var(--size) * 3);
+        max-width: $size * 57;
+        margin-top: $size * 3;
         align-self: center;
     }
 
     &__form {
         display: flex;
         flex-direction: column;
-        margin-top: calc(var(--size) * 5);
+        margin-top: $size * 5;
 
         .contact-us-form-inputs-wrapper,
         .contact-us-form-textarea-wrapper {
@@ -36,13 +36,13 @@
         }
 
         .contact-us-form-textarea-wrapper {
-            margin-top: var(--size);
+            margin-top: $size;
         }
 
         input {
             flex-grow: 1;
             &:not(:first-child) {
-                margin-left: var(--size);
+                margin-left: $size;
 
                 @media (max-width: 799px) {
                     margin-left: 0;
@@ -50,13 +50,13 @@
             }
 
             @media (max-width: 799px) {
-                margin-top: var(--size);
+                margin-top: $size;
             }
         }
 
         textarea {
             flex-grow: 1;
-            height: calc(var(--size) * 12);
+            height: $size * 12;
             resize: none;
         }
     }
@@ -65,7 +65,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: var(--size);
+        margin-top: $size;
 
         @media (max-width: 1259px) {
             flex-direction: column;
@@ -76,7 +76,7 @@
     &__button {
         background-color: #9b9b9b;
         border: 1px solid #9b9b9b;
-        transition: var(--transition);
+        transition: $transition;
         position: relative;
         z-index: 1;
 
@@ -86,7 +86,7 @@
 
         @media (max-width: 1259px) {
             order: 1;
-            width: calc(var(--size) * 62.5);
+            width: $size * 62.5;
         }
 
         @media (max-width: 649px) {
@@ -106,13 +106,14 @@
             border-radius: 5px;
             z-index: -1;
             transform: scaleY(0);
-            transition: var(--transition) ease-in;
+            transition: $transition ease-in;
         }
-
-        &:hover,
-        &:focus {
-            &::after {
-                transform: scale(1);
+        @media (min-width: 993px) {
+            &:hover,
+            &:focus {
+                &::after {
+                    transform: scale(1);
+                }
             }
         }
     }
@@ -124,8 +125,8 @@
 
         @media (max-width: 1259px) {
             order: 2;
-            margin-top: calc(var(--size) * 2);
-            width: calc(var(--size) * 62.5);
+            margin-top: $size * 2;
+            width: $size * 62.5;
         }
 
         @media (max-width: 649px) {
@@ -136,31 +137,31 @@
         .contact-wrapper {
             &:not(:first-child) {
                 @media (max-width: 649px) {
-                    margin-top: var(--size);
+                    margin-top: $size;
                 }
             }
         }
 
         i {
-            font-size: var(--fontsize-sm);
+            font-size: $fontsize-sm;
             color: #e8c300;
         }
 
         span {
             font-family: "Open Sans", sans-serif;
-            font-size: var(--fontsize-xs);
-            line-height: var(--lineheight-xs);
+            font-size: $fontsize-xs;
+            line-height: $lineheight-xs;
             font-weight: 700;
             color: rgba(51, 51, 51, 0.5);
-            margin-left: calc(var(--size) / 2);
+            margin-left: $size / 2;
         }
     }
 
     &__map {
         overflow: hidden;
         position: relative;
-        height: calc(var(--size) * 47.5);
-        margin-top: calc(var(--size) * 10);
+        height: $size * 47.5;
+        margin-top: $size * 10;
     }
 
     &__iframe-map {
