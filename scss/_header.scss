@@ -83,7 +83,7 @@
             left: 0;
             text-align: center;
             padding: 0;
-            margin-top: 70px;
+            margin-top: 71px;
             background-color: rgba(0, 0, 0, 0.95);
             overflow: auto;
             visibility: hidden;
@@ -108,7 +108,7 @@
 
         @media (max-width: 768px) {
             display: block;
-            width: 90vw;
+            width: 95vw;
             margin: 0 auto;
         }
 
@@ -170,10 +170,6 @@
     }
 
     &__rightnav {
-        @media (max-width: 768px) {
-            height: 100vh;
-        }
-
         &::after {
             left: 0;
         }

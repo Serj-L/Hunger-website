@@ -542,7 +542,7 @@ textarea::placeholder {
     left: 0;
     text-align: center;
     padding: 0;
-    margin-top: 70px;
+    margin-top: 71px;
     background-color: rgba(0, 0, 0, 0.95);
     overflow: auto;
     visibility: hidden;
@@ -574,7 +574,7 @@ textarea::placeholder {
 @media (max-width: 768px) {
   .header__leftnav, .header__rightnav {
     display: block;
-    width: 90vw;
+    width: 95vw;
     margin: 0 auto;
   }
 }
@@ -643,12 +643,6 @@ textarea::placeholder {
 
 .header__leftnav::after {
   right: 0;
-}
-
-@media (max-width: 768px) {
-  .header__rightnav {
-    height: 100vh;
-  }
 }
 
 .header__rightnav::after {
