@@ -2,6 +2,10 @@
     background-color: #ffffff;
     padding: $size * 10 $size * 1.5;
 
+    @media (max-width: 768px) {
+        padding: $size * 4.5 $size * 1.5;
+    }
+
     .menu-wrapper {
         display: flex;
         flex-direction: column;
@@ -46,6 +50,7 @@
                 }
 
                 @media (max-width: 576px) {
+                    flex-basis: 1 / 7 * 100%;
                     border: 1px solid rgba(51, 51, 51, 0.2);
                     border-radius: 2px;
                     margin: 2px;
@@ -60,13 +65,8 @@
                     }
                 }
 
-                @media (max-width: 340px) {
-                    width: $size * 10;
-                }
-
                 .menu-nav-item {
                     display: inline-block;
-                    font-family: "Open Sans", sans-serif;
                     font-size: $fontsize-xs;
                     line-height: $lineheight-xs;
                     font-weight: 700;
@@ -184,7 +184,6 @@
     }
 
     &__item-description {
-        font-family: "Open Sans", sans-serif;
         font-size: $fontsize-xs;
         line-height: $lineheight-xs;
         color: rgba(51, 51, 51, 0.5);

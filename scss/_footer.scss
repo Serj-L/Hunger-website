@@ -3,8 +3,11 @@
     padding: $size * 4 0;
     text-align: center;
 
+    @media (max-width: 768px) {
+        padding: $size * 2.5 0;
+    }
+
     span {
-        font-family: "Open Sans", sans-serif;
         font-size: $fontsize-xs;
         line-height: $lineheight-xs;
         font-weight: 400;

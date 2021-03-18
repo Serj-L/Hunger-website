@@ -1,6 +1,8 @@
 /* variables */
 $size: 10px;
 
+$page-width: 1440px;
+
 $fontsize-xs: 12px;
 $fontsize-sm: 14px;
 $fontsize-md: 18px;
@@ -55,18 +57,26 @@ $transition: 0.2s;
 
 body {
     background-color: #e5e5e5;
+    font-family: "Open Sans", sans-serif;
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 h1 {
     font-family: "Banny", sans-serif;
-    font-size: $fontsize-xxl;
+    font-size: calc(44px + 52 * ((100vw - 320px) / (1440 - 320)));
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: $page-width) {
+        font-size: $fontsize-xxl;
+    }
 }
 
 h2 {
-    font-family: "Open Sans", sans-serif;
     font-size: $fontsize-xs;
     line-height: $lineheight-xs;
     font-weight: 700;
@@ -84,7 +94,6 @@ h3 {
 }
 
 h4 {
-    font-family: "Open Sans", sans-serif;
     font-size: $fontsize-md;
     line-height: $lineheight-sm;
     font-weight: 700;
@@ -99,14 +108,12 @@ h5 {
 }
 
 .description {
-    font-family: "Open Sans", sans-serif;
     font-size: $fontsize-sm;
     line-height: $lineheight-sm;
     font-weight: 400;
 }
 
 .primary-btn {
-    font-family: "Open Sans", sans-serif;
     font-size: $fontsize-xs;
     line-height: $lineheight-sm;
     font-weight: 700;
@@ -119,7 +126,6 @@ h5 {
 
 input,
 textarea {
-    font-family: "Open Sans", sans-serif;
     font-size: $fontsize-sm;
     line-height: $lineheight-sm;
     font-weight: 400;
@@ -133,7 +139,6 @@ textarea {
     cursor: pointer;
 
     &::placeholder {
-        font-family: "Open Sans", sans-serif;
         font-size: $fontsize-sm;
         line-height: $lineheight-sm;
         font-weight: 400;
@@ -323,7 +328,7 @@ textarea {
 .scroll-up-btn {
     display: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
         display: flex;
         justify-content: center;
         align-items: center;

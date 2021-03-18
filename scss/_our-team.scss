@@ -5,6 +5,10 @@
     background-blend-mode: multiply;
     position: relative;
 
+    @media (max-width: 768px) {
+        padding: $size * 4.5 $size * 1.5;
+    }
+
     h2 {
         color: #ffffff;
         text-align: center;

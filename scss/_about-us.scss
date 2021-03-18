@@ -3,6 +3,10 @@
 
     .about-us-wrapper {
         padding: $size * 10 $size * 1.5;
+
+        @media (max-width: 768px) {
+            padding: $size * 6.5 $size * 1.5;
+        }
     }
 
     &__subtitle {

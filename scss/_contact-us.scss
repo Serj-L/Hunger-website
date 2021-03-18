@@ -2,6 +2,10 @@
     background-color: #ffffff;
     padding-top: $size * 10;
 
+    @media (max-width: 768px) {
+        padding-top: $size * 4.5;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -83,12 +87,10 @@
         @media (min-width: 1260px) {
             flex-basis: 50%;
         }
-
         @media (max-width: 1259px) {
             order: 1;
             width: $size * 62.5;
         }
-
         @media (max-width: 649px) {
             width: 100%;
         }
@@ -128,7 +130,6 @@
             margin-top: $size * 2;
             width: $size * 62.5;
         }
-
         @media (max-width: 649px) {
             flex-direction: column;
             width: 100%;
@@ -148,7 +149,6 @@
         }
 
         span {
-            font-family: "Open Sans", sans-serif;
             font-size: $fontsize-xs;
             line-height: $lineheight-xs;
             font-weight: 700;
@@ -162,6 +162,10 @@
         position: relative;
         height: $size * 47.5;
         margin-top: $size * 10;
+
+        @media (max-width: 768px) {
+            margin-top: $size * 4.5;
+        }
     }
 
     &__iframe-map {
