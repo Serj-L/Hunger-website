@@ -15,35 +15,6 @@
  });
 /* /scroll up */
 
-/* кнопки input (People) */
-$(document).on('click', '.input-down-button', function () {
-    let total = $(this).prev().prev();
-    if ( total.val() > 1 ) {
-        total.val(+total.val() - 1);
-    }
-});
-
-// Увеличиваем на 1
-$(document).on('click', '.input-up-button', function () {
-    let total = $(this).prev();
-    total.val(+total.val() + 1);
-});
-
-// Запрещаем ввод текста
-$(document).on('input', '.form-input--number-input', function () {
-    if (this.value.match(/[^0-9]/g)) {
-        this.value = this.value.replace(/[^0-9]/g, '');
-    }
-});
-
-// Hover на input
-$(document).ready(function() {
-    $('.input-up-button, .input-down-button').hover(function(event) {
-        $(".number-input-wrapper").toggleClass("active")
-    });
-});
-/* /кнопки input (People) */
-
 /* scroll-bar width calculation*/
 const getscrollbarWidth = () => {
     const outer = document.createElement("div");
@@ -62,8 +33,8 @@ const getscrollbarWidth = () => {
 }
 /* /scroll-bar width calculation*/
 
+/* burger menu */
 $(document).ready(function() {
-     /* burger menu */
 	$(".header__burger-btn").click(function(event) {
 		$(".header__burger-btn, .header__nav-wrapper").toggleClass("active")
         if($(".header__burger-btn").hasClass("active"))
@@ -85,9 +56,35 @@ $(document).ready(function() {
         $("body").css({"padding-right": ""})
         $("body").toggleClass("lock")
 	});
-    /* /burger menu */
+/* /burger menu */
 
-    /* menu */
+/* arrow-buttons (section Book-table, input People) */
+$(document).on('click', '.input-down-button', function () {
+    let total = $(this).prev().prev();
+    if ( total.val() > 1 ) {
+        total.val(+total.val() - 1);
+    }
+});
+// Increase +1
+$(document).on('click', '.input-up-button', function () {
+    let total = $(this).prev();
+    total.val(+total.val() + 1);
+});
+// ban on text entry
+$(document).on('input', '.form-input--number-input', function () {
+    if (this.value.match(/[^0-9]/g)) {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    }
+});
+// hover on input
+$(document).ready(function() {
+    $('.input-up-button, .input-down-button').hover(function(event) {
+        $(".number-input-wrapper").toggleClass("active")
+    });
+});
+/* /arrow-buttons (section Book-table, input People) */
+
+/* restourant menu */
     $('.pizza').click(function(event) {
         $('.pizza').addClass("active")
         $(".menu__list--pizza").addClass("active")
@@ -147,5 +144,5 @@ $(document).ready(function() {
         $(this).parent('li').addClass('active-span');
         $(".active-span").not($(this).parent("li")).removeClass("active-span")
     });
-/* /menu */
+/* /restourant menu */
 });

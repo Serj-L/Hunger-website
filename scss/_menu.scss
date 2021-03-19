@@ -3,7 +3,7 @@
     padding: $size * 10 $size * 1.5;
 
     @media (max-width: 768px) {
-        padding: $size * 4.5 $size * 1.5;
+        padding: $size * 4.8 $size * 1.5;
     }
 
     .menu-wrapper {
@@ -34,6 +34,9 @@
             justify-content: center;
             margin-top: $size * 5;
 
+            @media (max-width: 768px) {
+                margin-top: $size * 4;
+            }
             @media (max-width: 576px) {
                 flex-wrap: wrap;
             }
@@ -135,6 +138,9 @@
 
         @media (max-width: 854px) {
             margin: $size * 5 0 0;
+        }
+        @media (max-width: 768px) {
+            margin-top: $size * 2;
         }
     }
 
