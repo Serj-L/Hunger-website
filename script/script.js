@@ -175,3 +175,17 @@ $(document).ready(function() {
     });
 /* /restourant menu */
 });
+
+/* specialties slider */
+const swiper = new Swiper('.swiper-container', {
+    // parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+/* /specialties slider */

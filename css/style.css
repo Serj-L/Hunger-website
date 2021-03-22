@@ -1103,8 +1103,6 @@ textarea::placeholder {
   border: 1px solid rgba(250, 250, 250, 0.5);
   border-radius: 50%;
   margin: 80px auto 0;
-  position: relative;
-  z-index: 2;
 }
 
 @media (max-width: 1100px) {
@@ -1133,6 +1131,14 @@ textarea::placeholder {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+.header__down-btn a::after {
+  content: "\f078";
+  font-family: FontAwesome;
+  position: absolute;
 }
 
 @media (min-width: 993px) {
@@ -1215,6 +1221,7 @@ textarea::placeholder {
 .book-table {
   padding: 100px 15px 45px;
   background-color: #ffffff;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -1383,7 +1390,7 @@ textarea::placeholder {
 }
 
 .specialties {
-  padding: 45px 15px;
+  padding: 45px 0;
   background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.jpg") no-repeat center;
   background-size: cover;
   background-blend-mode: multiply;
@@ -1396,7 +1403,31 @@ textarea::placeholder {
 }
 
 .specialties .specialties-wrapper {
-  margin: 45px auto 0;
+  margin: 45px 0;
+}
+
+.specialties .swiper-container {
+  position: unset;
+}
+
+.specialties .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+}
+
+@media (max-width: 991px) {
+  .specialties .swiper-slide {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .specialties__content {
@@ -1417,7 +1448,8 @@ textarea::placeholder {
   }
 }
 
-.specialties__dots {
+.specialties .swiper-pagination {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1427,20 +1459,22 @@ textarea::placeholder {
   margin-top: 45px;
 }
 
-.specialties__dots .dot-indicator {
+.specialties .swiper-pagination-bullet {
   display: block;
   width: 10px;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   border-radius: 50%;
+  opacity: 1;
+  outline: none;
 }
 
-.specialties__dots .dot-indicator:not(:first-child) {
+.specialties .swiper-pagination-bullet:not(:first-child) {
   margin-left: 20px;
 }
 
-.specialties__dots .dot-indicator.active-dot {
+.specialties .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: white;
 }
 
