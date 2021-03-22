@@ -194,6 +194,7 @@
 
     &__logo {
         @media (min-width: 769px) {
+            outline: none;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);

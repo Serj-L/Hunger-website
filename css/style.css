@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* variables */
-/* variables */
+/* /variables */
 *,
 *::before,
 *::after {
@@ -10,6 +10,10 @@
           box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+}
+
+a {
+  outline: none;
 }
 
 @font-face {
@@ -677,6 +681,7 @@ textarea::placeholder {
 
 @media (min-width: 769px) {
   .header__logo {
+    outline: none;
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);

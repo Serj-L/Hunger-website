@@ -16,7 +16,7 @@ $lineheight-md: 36px;
 $lineheight-xl: 48px;
 
 $transition: 0.2s;
-/* variables */
+/* /variables */
 
 *,
 *::before,
@@ -26,6 +26,10 @@ $transition: 0.2s;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+}
+
+a {
+    outline: none;
 }
 
 @font-face {
