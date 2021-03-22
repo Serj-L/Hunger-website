@@ -28,15 +28,15 @@
         <div class="header__nav-wrapper">
             <ul class="header__leftnav">
                 <li class="nav-item"><a class="header__nav-link" href="index.html">HOME</a></li>
-                <li class="nav-item"><a class="header__nav-link" href="#about-us-section">ABOUT</a></li>
-                <li class="nav-item"><a class="header__nav-link" href="#our-team-section">TEAM</a></li>
-                <li class="nav-item"><a class="header__nav-link" href="#book-table-section">BOOKING</a></li>
+                <li class="nav-item"><a data-goto="#about-us-section" class="header__nav-link" href="#">ABOUT</a></li>
+                <li class="nav-item"><a data-goto="#our-team-section" class="header__nav-link" href="#">TEAM</a></li>
+                <li class="nav-item"><a data-goto="#book-table-section" class="header__nav-link" href="#">BOOKING</a></li>
             </ul>
             <ul class="header__rightnav">
-                <li class="nav-item"><a class="header__nav-link" href="#menu-section">MENU</a></li>
-                <li class="nav-item"><a class="header__nav-link" href="#event__fotos">GALERIE</a></li>
-                <li class="nav-item"><a class="header__nav-link" href="#event-section">EVENTS</a></li>
-                <li class="nav-item"><a class="header__nav-link" href="#contact-us-section">CONTACT</a></li>
+                <li class="nav-item"><a data-goto="#menu-section" class="header__nav-link" href="#">MENU</a></li>
+                <li class="nav-item"><a data-goto="#event__fotos" class="header__nav-link" href="#">GALERIE</a></li>
+                <li class="nav-item"><a data-goto="#event-section" class="header__nav-link" href="#">EVENTS</a></li>
+                <li class="nav-item"><a data-goto="#contact-us-section" class="header__nav-link" href="#">CONTACT</a></li>
             </ul>
         </div>
         <div class="header__burger-btn">
@@ -51,8 +51,8 @@
             <h2>RESTAURANT</h2>
             <h1>HUNGRY PEOPLE</h1>
             <div class="header__main-btn">
-                <a href="#book-table-section" class="btn primary-btn">BOOK TABLE</a>
-                <a href="#" class="btn primary-btn">EXPLORE</a>
+                <a data-goto="#book-table-section" href="#" class="btn primary-btn">BOOK TABLE</a>
+                <a data-goto="#about-us-section" href="#" class="btn primary-btn">EXPLORE</a>
             </div>
         </div>
         <nav class="header__social-nav">
@@ -76,7 +76,7 @@
         </nav>
     </div>
     <div class="header__down-btn">
-        <a href="#about-us-section">
+        <a data-goto="#about-us-section" class="down-btn" href="#">
             <i class="fas fa-chevron-down"></i>
         </a>
     </div>

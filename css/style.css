@@ -1079,7 +1079,7 @@ textarea::placeholder {
   }
 }
 
-@media (max-width: 993px) {
+@media (max-width: 992px) {
   .header .social-nav-items i {
     font-size: 18px;
     width: 50px;
@@ -1153,7 +1153,7 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .about-us .about-us-wrapper {
-    padding: 48px 15px;
+    padding: 45px 15px;
   }
 }
 
@@ -1181,7 +1181,7 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .our-team {
-    padding: 58px 15px 48px;
+    padding: 45px 15px;
   }
 }
 
@@ -1219,7 +1219,7 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .book-table {
-    padding: 48px 15px;
+    padding: 45px 15px;
   }
 }
 
@@ -1383,7 +1383,7 @@ textarea::placeholder {
 }
 
 .specialties {
-  padding: 58px 15px 48px;
+  padding: 45px 15px;
   background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.jpg") no-repeat center;
   background-size: cover;
   background-blend-mode: multiply;
@@ -1451,7 +1451,7 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .menu {
-    padding: 48px 15px;
+    padding: 45px 15px;
   }
 }
 
@@ -1754,7 +1754,7 @@ textarea::placeholder {
 }
 
 .event {
-  padding: 58px 15px 48px;
+  padding: 45px 15px;
   background: rgba(0, 0, 0, 0.6) url("../img/spec-bg.jpg") no-repeat center;
   background-size: cover;
   background-blend-mode: multiply;
@@ -1837,7 +1837,7 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .contact-us {
-    padding-top: 48px;
+    padding-top: 45px;
   }
 }
 
