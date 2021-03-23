@@ -177,10 +177,11 @@ $(document).ready(function() {
 });
 
 /* specialties slider */
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.specialties-wrapper', {
     // parameters
     direction: 'horizontal',
     loop: true,
+    autoplay: true,
 
     // pagination
     pagination: {

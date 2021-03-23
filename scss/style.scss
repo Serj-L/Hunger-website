@@ -202,6 +202,10 @@ textarea {
     max-width: $size * 128;
     margin: 0 auto;
 
+    @media (max-width: 1319px) {
+        max-width: 100%;
+    }
+
     @media (max-width: 991px) {
         justify-content: center;
     }
