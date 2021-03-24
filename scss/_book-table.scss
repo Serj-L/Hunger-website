@@ -48,11 +48,10 @@
         input {
             width: 100%;
         }
-        @media (min-width: 993px) {
-            &.active {
-                outline: 2px solid #e8c300;
-                outline-offset: -2px;
-            }
+
+        &.active {
+            outline: 2px solid #e8c300;
+            outline-offset: -2px;
         }
     }
 
