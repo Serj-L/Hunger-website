@@ -5,7 +5,7 @@
     background-blend-mode: multiply;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         padding: $size * 4.5 $size * 1.5;
     }
 
@@ -31,7 +31,7 @@
     }
 
     &__img {
-        @media (max-width: 991px) {
+        @media (max-width: 992px) {
             display: none;
         }
     }

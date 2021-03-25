@@ -228,7 +228,7 @@ textarea:focus {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .section-inner-wrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1187,7 +1187,7 @@ textarea:focus {
   padding: 100px 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .about-us .about-us-wrapper {
     padding: 45px 15px;
   }
@@ -1201,7 +1201,7 @@ textarea:focus {
   margin-top: 30px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .about-us__img {
     display: none;
   }
@@ -1215,7 +1215,7 @@ textarea:focus {
   position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .our-team {
     padding: 45px 15px;
   }
@@ -1242,7 +1242,7 @@ textarea:focus {
   margin-top: 30px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .our-team__img {
     display: none;
   }
@@ -1254,7 +1254,7 @@ textarea:focus {
   position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .book-table {
     padding: 45px 15px;
   }
@@ -1395,7 +1395,7 @@ textarea:focus {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .book-table__img {
     display: none;
   }
@@ -1450,7 +1450,7 @@ textarea:focus {
   padding: 0 15px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .specialties .swiper-slide {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1470,7 +1470,7 @@ textarea:focus {
   margin-top: 30px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .specialties__img {
     display: none;
   }
@@ -1512,7 +1512,7 @@ textarea:focus {
   padding: 100px 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .menu {
     padding: 45px 15px;
   }
@@ -1899,7 +1899,7 @@ textarea:focus {
   padding-top: 100px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .contact-us {
     padding-top: 45px;
   }
@@ -2143,9 +2143,9 @@ textarea:focus {
   margin-top: 100px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .contact-us__map {
-    margin-top: 48px;
+    margin-top: 45px;
   }
 }
 
