@@ -946,6 +946,7 @@ textarea:focus {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.2);
   width: 1px;
+  z-index: -1;
 }
 
 .header__main h2::before {
@@ -1224,6 +1225,8 @@ textarea:focus {
 .our-team h2 {
   color: #ffffff;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .our-team .our-team-wrapper {
@@ -1232,6 +1235,7 @@ textarea:focus {
 
 .our-team__content {
   color: #ffffff;
+  z-index: 1;
 }
 
 .our-team__subtitle {
@@ -1840,10 +1844,13 @@ textarea:focus {
 .event h2 {
   color: #ffffff;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .event span {
   color: rgba(255, 255, 255, 0.5);
+  position: relative;
 }
 
 .event .img-title-left,
